@@ -1,0 +1,54 @@
+# =============================================================================
+# wiki-template/.gitignore
+# =============================================================================
+# 核心原则：raw/ 里的所有内容永远不入 git。
+# 原因：Claude Code 的 session jsonl 里有 Anthropic OAuth token
+#      (sk-ant-oat01-... 是访问令牌, sk-ant-ort01-... 是刷新令牌)
+# 这些 token 泄露 = Claude 账号被接管。
+# 其他 agent 的 raw 也可能含 API key / 客户信息 / 个人画像，统一不入 git。
+# =============================================================================
+
+# 原始会话归档
+raw/
+
+# 脱敏后的镜像目录（默认也不 git；如果确认干净再手动解禁）
+raw-redacted/
+
+# 本机配置（setup.ps1 生成，含绝对路径）
+tools/config.json
+
+# 日志和扫描报告
+tools/logs/
+tools/scan_report.md
+tools/*.log
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# 环境文件
+.env
+.env.*
+
+# 凭证 / 密钥 / 2FA 恢复码（任何形式都不入 git）
+*recovery-codes*
+*recovery_codes*
+*-pat.txt
+*-token.txt
+credentials.json
+secrets.json
+
+# 编辑器临时文件
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Obsidian 用户状态（workspace/plugins 缓存），保留核心配置
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.obsidian/plugins/*/data.json

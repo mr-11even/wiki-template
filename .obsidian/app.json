@@ -1,0 +1,16 @@
+{
+  "userIgnoreFilters": [
+    "raw/",
+    "raw-redacted/",
+    "tools/",
+    ".git/"
+  ],
+  "attachmentFolderPath": "attachments",
+  "newLinkFormat": "shortest",
+  "useMarkdownLinks": true,
+  "showLineNumber": true,
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": false,
+  "promptDelete": true,
+  "defaultViewMode": "source"
+}
