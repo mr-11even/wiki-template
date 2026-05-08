@@ -166,7 +166,7 @@ AI 给一个清单。你 yes/no/skip 它写。一周一次，半小时。
 ├── CLAUDE.md                 ← Claude Code 兼容兜底（指向 AGENTS.md）
 ├── schema.md                 ← 结构规则（页面模板 / 增量更新流程）
 ├── update-log.md             ← 每次更新的 diff
-├── README-setup.md           ← 本文件
+├── README.md                 ← 本文件
 ├── setup.ps1                 ← Claude Code 用户用的自动化安装脚本
 ├── .gitignore
 ├── .obsidian/                ← Obsidian 预配置
